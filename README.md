@@ -130,19 +130,9 @@ OutsourcedPartForm.html line 30 added input field for maximum inventory.
 OutsourcedPartForm.html line 31 add if statement to check maxInv.
 Part.java line 119 added isInvValid() function to check if inventory is between minInv and maxInv.
 AddInhousePartController.java line 46 added else if statement to check if inventory is in range of minInv and maxInv.
-AddInhousePartController.java line 48 added a return to inventorynotinrange.html.
+AddInhousePartController.java line 48 used BindingResult to reject bad value with a message.
 AddOutsourcedPartController.java line 46 added else if statement to check if inventory is in range of minInv and maxInv.
-AddOutsourcedPartController.java line 48 added a return to inventoryoutofrange.html.
-Created inventorynotinrange.html.
-Created inventoryoutofrange.html.
-inventorynotinrange.html copied from buysuccess.html.
-inventorynotinrange.html line 14 changed title to "Inventory not in range".
-inventorynotinrange.html line 19 changed paragraph to "Inventory not in range of minimum and maximum inventory".
-inventorynotinrange.html line 22 added a link back to InhousePartForm.html.
-inventoryoutofrange.html copied from inventorynotinrange.html.
-inventoryoutofrange.html line 14 changed title to "Inventory not in range".
-inventoryoutofrange.html line 19 changed paragraph to "Inventory not in range of minimum and maximum inventory".
-inventoryoutofrange.html line 22 added a link back to OutsourcedPartForm.html.
+AddOutsourcedPartController.java line 48 used BindingResult to reject bad value with a message.
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.

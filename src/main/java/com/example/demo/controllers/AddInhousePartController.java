@@ -45,7 +45,8 @@ public class AddInhousePartController{
         }
         else if (!part.isInvValid(part.getInv(), part.getMinInv(), part.getMaxInv()))
         {
-            return "inventorynotinrange";
+            theBindingResult.rejectValue("inv","error.inv", "Inventory not in range");
+            return "InhousePartForm";
         }
         else{
         InhousePartService repo=context.getBean(InhousePartServiceImpl.class);
