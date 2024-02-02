@@ -45,8 +45,14 @@ public class AddInhousePartController{
         }
         else if (!part.isInvValid(part.getInv(), part.getMinInv(), part.getMaxInv()))
         {
-            theBindingResult.rejectValue("inv","error.inv", "Inventory not in range");
-            return "InhousePartForm";
+            if (part.getInv() < part.getMinInv()) {
+                theBindingResult.rejectValue("inv", "error.inv", "Inventory is less than the minimum allowed inventory");
+                return "InhousePartForm";
+            }
+            else {
+                theBindingResult.rejectValue("inv", "error.inv", "Inventory is greater than the maximum allowed inventory");
+                return "InhousePartForm";
+            }
         }
         else{
         InhousePartService repo=context.getBean(InhousePartServiceImpl.class);

@@ -138,6 +138,18 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
+    AddInhousePartController.java line 48 added if statement to check if part.inv is less than part.minInv.
+    AddInhousePartController.java line 49 use Binding result to output an error message for inventory too low.
+    AddInhousePartController.java line 50 return "InhousePartForm".
+    AddInhousePartController.java line 52 else statement for if inventory is to big.
+    AddInhousePartController.java line 53 use Binding result to output error message for inventory too high.
+    AddInhousePartController.java line 54 return "InhousePartForm".
+    AddOutsourcedPartController.java line 48 added if statement to check if part.inv is less than part.minInv.
+    AddOutsourcedPartController.java line 49 use Binding result to output an error message for inventory too low.
+    AddOutsourcedPartController.java line 50 return "OutsourcedPartForm".
+    AddOutsourcedPartController.java line 52 else statement for if inventory is to big.
+    AddOutsourcedPartController.java line 53 use Binding result to output error message for inventory too high.
+    AddOutsourcedPartController.java line 54 return "OutsourcedPartForm".
 
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
