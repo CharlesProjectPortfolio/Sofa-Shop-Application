@@ -43,6 +43,10 @@ public class AddOutsourcedPartController {
         if(bindingResult.hasErrors()){
             return "OutsourcedPartForm";
         }
+        else if (!part.isInvValid(part.getInv(), part.getMinInv(), part.getMaxInv()))
+        {
+            return "inventoryoutofrange";
+        }
         else{
         OutsourcedPartService repo=context.getBean(OutsourcedPartServiceImpl.class);
         OutsourcedPart op=repo.findById((int)part.getId());
