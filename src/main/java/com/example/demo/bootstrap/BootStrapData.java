@@ -52,19 +52,19 @@ public class BootStrapData implements CommandLineRunner {
             o.setCompanyName("Weston Furniture Store");
             o.setName("cushions");
             o.setId(100L);
-            o.setInv(50);
+            o.setInv(10);
             o.setPrice(50.0);
-            o.setMinInv(0);
-            o.setMaxInv(100);
+            o.setMinInv(5);
+            o.setMaxInv(20);
             outsourcedPartRepository.save(o);
             // Create an outsourced part
             o.setCompanyName("Liam's Furniture Store");
             o.setName("pair of arms");
-            o.setInv(50);
+            o.setInv(10);
             o.setPrice(50.0);
             o.setId(100L);
-            o.setMinInv(0);
-            o.setMaxInv(100);
+            o.setMinInv(5);
+            o.setMaxInv(20);
             outsourcedPartRepository.save(o);
             // Create a variable for OutsourcedPart and a list of outsourced parts
             OutsourcedPart thePart=null;
@@ -77,27 +77,27 @@ public class BootStrapData implements CommandLineRunner {
             InhousePart i = new InhousePart(); // Create the object InhousePart
             // Create the first inhouse part part
             i.setName("legs");
-            i.setInv(50);
+            i.setInv(10);
             i.setPrice(25.00);
             i.setId(200L);
-            i.setMinInv(0);
-            i.setMaxInv(100);
+            i.setMinInv(5);
+            i.setMaxInv(20);
             inhousePartRepository.save(i);
             // second inhouse part
             i.setName("back");
-            i.setInv(50);
+            i.setInv(10);
             i.setPrice(300);
             i.setId(300L);
-            i.setMinInv(0);
-            i.setMaxInv(100);
+            i.setMinInv(5);
+            i.setMaxInv(10);
             inhousePartRepository.save(i);
             // Third inhouse part
             i.setName("motor");
-            i.setInv(25);
+            i.setInv(10);
             i.setPrice(500.00);
             i.setId(500L);
-            i.setMinInv(0);
-            i.setMaxInv(100);
+            i.setMinInv(9);
+            i.setMaxInv(20);
             inhousePartRepository.save(i);
             // Create a variable for InhousePart and a list
             InhousePart theInPart = null;
@@ -124,7 +124,7 @@ public class BootStrapData implements CommandLineRunner {
         // Check if productRepository is empty
         if (productRepository.count() == 0) {
             // Create new products
-            Product sofa= new Product("sofa",500.0,15);
+            Product sofa= new Product("sofa",700.0,15);
             Product recliningSofa= new Product("Reclining Sofa",800.0,50);
             Product poweredRecliningSofa= new Product("Powered Reclining Sofa",1500.0,75);
             Product loveseat= new Product("Loveseat",700.0,50);

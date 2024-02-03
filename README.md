@@ -150,6 +150,9 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
     AddOutsourcedPartController.java line 52 else statement for if inventory is to big.
     AddOutsourcedPartController.java line 53 use Binding result to output error message for inventory too high.
     AddOutsourcedPartController.java line 54 return "OutsourcedPartForm".
+    ValidEnufParts.java line 20 Updated the error message
+    EnufPartsValidator.java line 37 added if statement to check if making the update would lower the parts to below the minimum inventory.
+
 
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
