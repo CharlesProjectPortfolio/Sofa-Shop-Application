@@ -170,3 +170,5 @@ I.  Add at least two unit tests for the maximum and minimum fields to the PartTe
     PartTest.java line 119 Used the assert equals method to test the output.
 
 J.  Remove the class files for any unused validators in order to clean your code.
+    DeletePartValidator.java removed from validators folder.
+    ValidDeletePart.java removed from validators folder.

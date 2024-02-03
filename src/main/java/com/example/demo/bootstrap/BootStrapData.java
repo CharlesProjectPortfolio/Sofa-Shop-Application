@@ -52,19 +52,19 @@ public class BootStrapData implements CommandLineRunner {
             o.setCompanyName("Weston Furniture Store");
             o.setName("cushions");
             o.setId(100L);
-            o.setInv(10);
+            o.setInv(20);
             o.setPrice(50.0);
-            o.setMinInv(5);
-            o.setMaxInv(20);
+            o.setMinInv(10);
+            o.setMaxInv(50);
             outsourcedPartRepository.save(o);
             // Create an outsourced part
             o.setCompanyName("Liam's Furniture Store");
             o.setName("pair of arms");
-            o.setInv(10);
+            o.setInv(20);
             o.setPrice(50.0);
             o.setId(100L);
-            o.setMinInv(5);
-            o.setMaxInv(20);
+            o.setMinInv(10);
+            o.setMaxInv(50);
             outsourcedPartRepository.save(o);
             // Create a variable for OutsourcedPart and a list of outsourced parts
             OutsourcedPart thePart=null;
@@ -77,10 +77,10 @@ public class BootStrapData implements CommandLineRunner {
             InhousePart i = new InhousePart(); // Create the object InhousePart
             // Create the first inhouse part part
             i.setName("legs");
-            i.setInv(10);
+            i.setInv(20);
             i.setPrice(25.00);
             i.setId(200L);
-            i.setMinInv(5);
+            i.setMinInv(10);
             i.setMaxInv(20);
             inhousePartRepository.save(i);
             // second inhouse part
@@ -89,15 +89,15 @@ public class BootStrapData implements CommandLineRunner {
             i.setPrice(300);
             i.setId(300L);
             i.setMinInv(5);
-            i.setMaxInv(10);
+            i.setMaxInv(20);
             inhousePartRepository.save(i);
             // Third inhouse part
             i.setName("motor");
-            i.setInv(10);
+            i.setInv(20);
             i.setPrice(500.00);
             i.setId(500L);
-            i.setMinInv(9);
-            i.setMaxInv(20);
+            i.setMinInv(10);
+            i.setMaxInv(50);
             inhousePartRepository.save(i);
             // Create a variable for InhousePart and a list
             InhousePart theInPart = null;
