@@ -156,6 +156,17 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
-
+    PartTest.java line 105 added a unit test getMinInv().
+    PartTest.java line 106 added a variable and assigned it with the minimum value.
+    PartTest.java line 107 used the partIn to set the minimum value.
+    PartTest.java line 108 used the assert equals method to test the input.
+    PartTest.java line 109 Used the partOut to set the minimum value.
+    PartTest.java line 110 Used the assert equals method to test the output.
+    PartTest.java line 114 added a unit test getMaxInv().
+    PartTest.java line 115 added a variable and assigned it with the maximum value.
+    PartTest.java line 116 used the partIn to set the maximum value.
+    PartTest.java line 117 used the assert equals method to test the input.
+    PartTest.java line 118 Used the partOut to set the maximum value.
+    PartTest.java line 119 Used the assert equals method to test the output.
 
 J.  Remove the class files for any unused validators in order to clean your code.
